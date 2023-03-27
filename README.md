@@ -23,5 +23,5 @@ Meanwhile, the <code>SamuelNet</code>'s classifier uses three fully-connected (F
 
 We also added dropouts in our model to improve generalization. 
 
-<img src="/figures/samuelnet.PNG" width="708"/>
-Note: <code>SamuelNet</code> is not a published CNN model framework. This is a project as a partial fulfillment of the author in RADI605: Modern Machine Learning class.
+<img src="/figures/samuelnet.PNG" width = "508"/>
+Note: <code>SamuelNet</code> is not a published CNN model framework. This is a project as a partial requirement of the author in RADI605: Modern Machine Learning class.
