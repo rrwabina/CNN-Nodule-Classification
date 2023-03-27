@@ -1,5 +1,6 @@
 # CNN Nodule Classification
-In this repository, we utilized Convolutional Neural Networks (CNN) to develop a binary classification model in detecting nodules in CT scans. 
+In this repository, we utilized Convolutional Neural Networks (CNN) to develop a binary classification model in detecting nodules in CT scans. We implemented all models using PyTorch version 3.9, where the Intel 8th generation CPU performed all simulation in this study witn an NVIDIA RTX 1050Ti 4GB graphics card.
+
 
 You can access the main Jupyter Notebook in the file:
 ```
