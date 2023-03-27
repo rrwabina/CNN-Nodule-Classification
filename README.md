@@ -4,7 +4,7 @@ In this repository, we utilized Convolutional Neural Networks (CNN) to develop a
 
 You can access the main Jupyter Notebook in the file:
 ```
-../scripts/main.ipynb
+../notebooks/main.ipynb
 ```
 
 ## Background
