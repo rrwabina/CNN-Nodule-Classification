@@ -23,4 +23,4 @@ Meanwhile, the <code>SamuelNet</code>'s classifier uses three fully-connected (F
 
 We also added dropouts in our model to improve generalization. 
 
-<img src="/figures/nn.svg" width="708"/>
+<!-- <img src="/figures/nn.svg" width="708"/> -->
