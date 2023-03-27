@@ -22,6 +22,7 @@ We changed the AlexNet's feature extraction layers from five (5) to two (2) conv
 Meanwhile, the <code>SamuelNet</code>'s classifier uses three fully-connected (FC) layers. However, we modified the third FC layer from the baseline model with 2 channels to classify 2 classes, instead of the regular 10 classes.
 
 We also added dropouts in our model to improve generalization. 
-
+<center>
 <img src="/figures/samuelnet.PNG" width = "508"/>
+</center>
 Note: <code>SamuelNet</code> is not a published CNN model framework. This is a project as a partial requirement of the author in RADI605: Modern Machine Learning class.
