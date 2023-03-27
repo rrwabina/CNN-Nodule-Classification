@@ -14,6 +14,12 @@ The use of imaging scans for nodule detection has increased in recent years, res
 
 Artificial intelligence and machine learning techniques have shown potential in improving the accuracy of nodule classification by analyzing large amounts of medical images and identifying patterns and features that differentiate between benign and malignant nodules. This area of research is important for early cancer detection and improving patient outcomes.
 
+## Dependencies
+You need to install the prerequisites.
+``` 
+pip install -r requirements.txt
+```
+
 ## Model Formulation
 We created our proposed model in a class called <code>SamuelNet</code>. This model takes an input size of $50 \times 50$ tensors and our output represents the 2 possible digits - either 0 or 1. We used AlexNet architecture as the baseline model for the nodule classification. However, we modified the baseline model in terms of the feature extractions and classifiers. 
 
