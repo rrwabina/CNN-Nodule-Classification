@@ -1,6 +1,11 @@
 # CNN Nodule Classification
 In this repository, we utilized Convolutional Neural Networks (CNN) to develop a binary classification model in detecting nodules in CT scans. 
 
+You can access the main Jupyter Notebook in the file:
+```
+../scripts/main.ipynb
+```
+
 ## Background
 Nodule binary classification is a field of study in medical imaging that aims to differentiate between benign and malignant nodules detected in imaging scans like CT scans. Nodules are small growths that can occur in various organs and accurate classification of nodules is crucial for the diagnosis and treatment of conditions like cancer.
 
