@@ -92,3 +92,41 @@ def plot_metrics(train_losses, valid_losses, train_accurs, valid_accurs):
     ax2.set_title('Accuracies')
     ax2.legend()
     plt.show()
+
+def display_images_from_loader(loader, class_names = ['Benign', 'Malignant'], nrow = 6):
+    for images, labels in loader:
+        break
+
+    print('Label:', labels.numpy())
+    print('Class: ', *np.array([class_names[i] for i in labels]))
+
+    im = make_grid(images, nrow=nrow)
+    plt.figure(figsize=(15, 8))
+    plt.imshow(np.transpose(im.numpy(), (1, 2, 0)))
+    plt.axis('off')
+    plt.show()
+
+def check_imbalance(dataset):
+    classes = [label for _,   label in dataset]
+    index_0 = len([idx   for idx, label in enumerate(classes) if label == 0])
+    index_1 = len([idx   for idx, label in enumerate(classes) if label == 1])
+    return index_0, index_1 
+
+def plot_imbalance(train_dataset, valid_dataset):
+    class_count_train = check_imbalance(train_dataset)
+    class_count_valid = check_imbalance(valid_dataset)
+
+    fig, axs = plt.subplots(1, 2, figsize = (12, 6))
+    fig.suptitle('Class distribution in Training and Validation sets', size = 15)
+    labels = ['0: Benign', '1: Malignant']
+
+    axs[0].bar(labels, class_count_train)
+    axs[0].set_title('Train set')
+    axs[0].set_xlabel('Class', size = 12)
+    axs[0].set_ylabel('Number of samples')
+
+    axs[1].bar(labels, class_count_valid)
+    axs[1].set_title('Validation set')
+    axs[1].set_xlabel('Class', size = 12)
+    axs[1].set_ylabel('Number of samples')
+    plt.show()
