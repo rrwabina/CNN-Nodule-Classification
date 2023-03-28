@@ -27,6 +27,12 @@ import warnings
 warnings.filterwarnings('ignore')
 
 def get_sampler(dataset):
+    '''  
+        Arguments:
+            dataset: Any imbalanced dataset that requires oversampling
+        Returns:
+            dataset used with Weighted Random Sampler
+    '''
     classes = [label for _,   label in dataset]
     index_0 = [idx   for idx, label in enumerate(classes) if label == 0]
     index_1 = [idx   for idx, label in enumerate(classes) if label == 1]
@@ -35,3 +41,54 @@ def get_sampler(dataset):
     weights[index_1] = 1.0 / len(index_1)
     sampler = WeightedRandomSampler(weights = weights, num_samples = len(weights), replacement = True)
     return sampler
+
+def count_parameters(model, print_all = True):
+    ''' 
+        Arguments:
+            model: Deep learning to be analyzed in terms of number of parameters
+            print_all: Print the number of parameters for each layer
+        Returns:
+            number of parameters
+    '''
+    params = [p.numel() for p in model.parameters() if p.requires_grad]
+    if print_all:
+        for item in params:
+            print(f'{item:>8}')
+    print(f'________\n{sum(params):>8}')
+
+def epoch_time(start_time, end_time):
+    elapsed_time = end_time - start_time
+    elapsed_mins = int(elapsed_time / 60)
+    elapsed_secs = int(elapsed_time - (elapsed_mins * 60))
+    return elapsed_mins, elapsed_secs
+
+def plot_metrics(train_losses, valid_losses, train_accurs, valid_accurs):
+    alpha = 0.3
+    smoothed_train_losses = [train_losses[0]]
+    smoothed_valid_losses = [valid_losses[0]]
+    smoothed_train_accurs = [train_accurs[0]]
+    smoothed_valid_accurs = [valid_accurs[0]]
+    
+    for i in range(1, len(train_losses)):
+        smoothed_train_losses.append(alpha * train_losses[i] + (1-alpha) * smoothed_train_losses[-1])
+        smoothed_valid_losses.append(alpha * valid_losses[i] + (1-alpha) * smoothed_valid_losses[-1])
+        smoothed_train_accurs.append(alpha * train_accurs[i] + (1-alpha) * smoothed_train_accurs[-1])
+        smoothed_valid_accurs.append(alpha * valid_accurs[i] + (1-alpha) * smoothed_valid_accurs[-1])
+    
+    smoothed_train_losses = train_losses
+    smoothed_train_accurs = train_accurs
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (12, 5))
+    ax1.plot(smoothed_train_losses, label = 'Train')
+    ax1.plot(smoothed_valid_losses, label = 'Valid')
+    ax1.set_xlabel('Epoch')
+    ax1.set_ylabel('Loss')
+    ax1.set_title('Losses')
+    ax1.legend()
+
+    ax2.plot(smoothed_train_accurs, label='Train')
+    ax2.plot(smoothed_valid_accurs, label='Valid')
+    ax2.set_xlabel('Epoch')
+    ax2.set_ylabel('Accuracy')
+    ax2.set_title('Accuracies')
+    ax2.legend()
+    plt.show()
