@@ -32,5 +32,5 @@ We also added dropouts in our model to improve generalization.
 </center>
 Note: <code>SamuelNet</code> is not a published CNN model framework. This is a project as a partial requirement of the author in RADI605: Modern Machine Learning class.
 <center>
-<img src="/figures/modifiedsamuelnet_ver2.PNG" width = "508"/>
+<img src="/figures/modifiedsamuelnet_ver2.PNG" width = "808"/>
 </center>
