@@ -26,6 +26,18 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 import warnings 
 warnings.filterwarnings('ignore')
 
+def epoch_time(start_time, end_time):
+    ''' 
+    Arguments: 
+        start_time 
+        end_time   
+    Returns the elapsed minute and seconds of model training
+    '''
+    elapsed_time = end_time - start_time
+    elapsed_mins = int(elapsed_time / 60)
+    elapsed_secs = int(elapsed_time - (elapsed_mins * 60))
+    return elapsed_mins, elapsed_secs
+
 def get_sampler(dataset):
     '''  
         Arguments:
