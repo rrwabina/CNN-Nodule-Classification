@@ -105,7 +105,7 @@ def plot_metrics(train_losses, valid_losses, train_accurs, valid_accurs):
     ax2.legend()
     plt.show()
 
-def display_images_from_loader(loader, class_names = ['Benign', 'Malignant'], nrow = 6):
+def display_loader(loader, class_names = ['Benign', 'Malignant'], nrow = 6):
     for images, labels in loader:
         break
 
