@@ -34,3 +34,11 @@ We also added dropouts in our model to improve generalization.
 <img src="/figures/samuelnet.PNG" width = "808"/>
 </center>
 Note: <code>SamuelNet</code> is not a published CNN model framework. This is a project as a partial requirement of the author in RADI605: Modern Machine Learning class.
+
+## Summary
+
+| Model     | Setosa        | Versicolor      | Virginica       |
+|:---------:|---------------|-----------------|-----------------|
+| Setosa    | $P_{SS} = 10$ | $P_{SVe}  = 0 $ | $P_{SVi}  = 0 $ |
+| Versicolor| $P_{VeS} = 0$ | $P_{VeVe} = 10$ | $P_{VeVi} = 1 $ |
+| Virginica | $P_{ViS} = 0$ | $P_{ViVe} = 0 $ | $P_{ViVi} = 13$ |
