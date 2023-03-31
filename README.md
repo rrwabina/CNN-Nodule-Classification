@@ -5,7 +5,10 @@ You can access the main Jupyter Notebook in the file:
 ```
 ../notebooks/main.ipynb
 ```
-
+This notebook utilized pre-trained CNN models (i.e., AlexNet, VGG16, and DenseNet). The user may also want to explore other CNN models (not pre-trained), such as LeNet and GoogleNet, written in Pythonn files. Feel free to explore!
+```
+../architecture
+```
 ## Background
 Nodule binary classification is a field of study in medical imaging that aims to differentiate between benign and malignant nodules detected in imaging scans like CT scans. Nodules are small growths that can occur in various organs and accurate classification of nodules is crucial for the diagnosis and treatment of conditions like cancer.
 
