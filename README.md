@@ -36,9 +36,15 @@ We also added dropouts in our model to improve generalization.
 Note: <code>SamuelNet</code> is not a published CNN model framework. This is a project as a partial requirement of the author in RADI605: Modern Machine Learning class.
 
 ## Summary
+The table below shows the summary of performance metrics of different CNN models, along with their number of parameters, testing accuracy, and F1-score for both labels. 
 
-| Model     | Setosa        | Versicolor      | Virginica       |
-|:---------:|---------------|-----------------|-----------------|
-| Setosa    | $P_{SS} = 10$ | $P_{SVe}  = 0 $ | $P_{SVi}  = 0 $ |
-| Versicolor| $P_{VeS} = 0$ | $P_{VeVe} = 10$ | $P_{VeVi} = 1 $ |
-| Virginica | $P_{ViS} = 0$ | $P_{ViVe} = 0 $ | $P_{ViVi} = 13$ |
+| Model                 |  Parameters    | Testing Accuracy | F1-score (0)    | F1-score (1)    |
+|:---------------------:|----------------|------------------|-----------------|-----------------|
+| SamuelNet             |   1,666,530    |  84%             | 90%             | 61%             |
+| AlexNet               |     120,770    |  50%             | 65%             | 15%             |
+| VGG16                 |       8,194    |  50%             | 65%             | 15%             |
+| VGG16**               | 139,578,434    |  17%             | 49%             | 14%             |
+| DenseNet-121          |   7,978,856    |  82%             | 89%             | 50%             |
+| DenseNet-121 (72)     |   7,978,856    |  91%             | 95%             | 67%             |
+| **ModifiedSamuelNet   |   6,761,986    |  95%             | 97%             | 80%**           |
+**VGG16 not shown in notebook and was trained separately on Google Colab.
