@@ -38,7 +38,7 @@ Note: <code>SamuelNet</code> is not a published CNN model framework. This is a p
 ## Summary
 The table below shows the summary of performance metrics of different CNN models, along with their number of parameters, testing accuracy, and F1-score for both labels. As seen in the table, **ModifiedSamuelNet** acquired the best performance metrics among the trained models.
 
-Note: The VGG16** was not shown in notebook but was trained separately on Google Colab.
+Note: The VGG16** was not shown in notebook but was trained separately on Google Colab. The DenseNet-121 (72) refers to the best model acquired during 72nd epoch of model training.
 
 | Model                 |  Parameters    | Testing Accuracy | F1-score (0)    | F1-score (1)    |
 |:---------------------:|----------------|------------------|-----------------|-----------------|
