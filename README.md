@@ -36,7 +36,7 @@ We also added dropouts in our model to improve generalization.
 Note: <code>SamuelNet</code> is not a published CNN model framework. This is a project as a partial requirement of the author in RADI605: Modern Machine Learning class.
 
 ## Summary
-The table below shows the summary of performance metrics of different CNN models, along with their number of parameters, testing accuracy, and F1-score for both labels. 
+The table below shows the summary of performance metrics of different CNN models, along with their number of parameters, testing accuracy, and F1-score for both labels. The VGG16** was not shown in notebook but was trained separately on Google Colab.
 
 | Model                 |  Parameters    | Testing Accuracy | F1-score (0)    | F1-score (1)    |
 |:---------------------:|----------------|------------------|-----------------|-----------------|
@@ -47,4 +47,3 @@ The table below shows the summary of performance metrics of different CNN models
 | DenseNet-121          |   7,978,856    |  82%             | 89%             | 50%             |
 | DenseNet-121 (72)     |   7,978,856    |  91%             | 95%             | 67%             |
 | **ModifiedSamuelNet   |   6,761,986    |  95%             | 97%             | 80%**           |
-**VGG16 not shown in notebook and was trained separately on Google Colab.
