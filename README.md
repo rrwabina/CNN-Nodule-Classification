@@ -46,4 +46,4 @@ The table below shows the summary of performance metrics of different CNN models
 | VGG16**               | 139,578,434    |  17%             | 49%             | 14%             |
 | DenseNet-121          |   7,978,856    |  82%             | 89%             | 50%             |
 | DenseNet-121 (72)     |   7,978,856    |  91%             | 95%             | 67%             |
-| **ModifiedSamuelNet   |   6,761,986    |  95%             | 97%             | 80%**           |
+| ModifiedSamuelNet     |   6,761,986    |  95%             | 97%             | 80%             |
